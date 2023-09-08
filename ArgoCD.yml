@@ -4,12 +4,12 @@ metadata:
   name: my-pc-app
 spec:
   destination:
-    server: https://127.0.0.1:8080/applications# Replace with your ArgoCD server URL
+    server: 'https://kubernetes.default.svc' # Replace with your ArgoCD server URL
     namespace: default
   project: default
   source:
-    repoURL: https://github.com/shailednrapali/Kubernetes.git # Replace with your Git repository URL
+    repoURL: https://github.com/shailednrapali/ArgoCD-PC-Sample.git # Replace with your Git repository URL
     targetRevision: HEAD
-    path: kubernetes/nginx
+    path: .
   syncPolicy:
     automated: {}
